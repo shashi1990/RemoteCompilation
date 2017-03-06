@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Remote Compilation</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+       
+        <div style="padding:20px;margin:20px">
+            <div class="row" style="padding:25px">
+                <div class=col-md-2></div>
+                <div class=col-md-8>
+                    <h1>
+                        Welcome!! You can try Following Questions....
+                    </h1>
+                </div>
+            </div>
+            <% questions.forEach(function(question){ %>
+            <div class="row">
+                <div class=col-md-2></div>
+                <div class=col-md-8>
+                    <div class="panel panel-default panel-primary">
+                       
+                        <div class="panel-heading">
+                            <a href=<%="/questions/"+question._id%> style="color: inherit"><h1 class="panel-title"><%= question.title %></h1></a> 
+                        </div>
+                        <div class="panel-body"> <%= (question.description).substring(0,150) %></div>
+                    </div>
+                    <!--<div class="well" style="margin:10px;padding:10px">-->
+                    <!--    <h2>-->
+                    <!--        <%= question.title %>-->
+                    <!--    </h2>-->
+                    <!--    <p>-->
+                    <!--         <%= (question.description).substring(0,150) %>-->
+                    <!--    </p>-->
+                    <!--</div>-->
+                </div>
+                <div class=col-md-2></div>
+            </div>
+            <% }); %>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    
+</html>
